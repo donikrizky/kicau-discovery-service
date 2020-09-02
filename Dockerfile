@@ -11,3 +11,5 @@ RUN mvn package && cp target/discovery-service-0.0.1-SNAPSHOT.jar app.jar
 FROM openjdk:8-jre-alpine
 WORKDIR /app
 COPY --from=maven /app/app.jar ./app.jar
+
+CMD ["java", "-jar", "/app/app.jar"]

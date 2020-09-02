@@ -12,4 +12,4 @@ FROM openjdk:8-jre-alpine
 WORKDIR /app
 COPY --from=maven /app/app.jar ./app.jar
 
-CMD ["java", "-jar", "/app/app.jar"]
+ENTRYPOINT ["java","-jar","/app/app.jar"]
